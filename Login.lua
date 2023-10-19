@@ -60,9 +60,9 @@ function DiscordHookCheck()
     request(HOOK)
 end
 if _G.Key == Key or _G.Key == "25382433Doraemonhub" then
-    if hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() or "25382433Doraemonhub" then
+    if hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() or _G.Key == "25382433Doraemonhub" then
 	if game.PlaceId == 11676779804 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
+        	loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
 	else
 		game.Players.LocalPlayer:Kick("Map ผิด!!!")	
 	end
