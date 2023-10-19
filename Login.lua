@@ -15,7 +15,7 @@ function checkKeyAndHWID(key, hwid)
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
                 return
             else
-                game.PLayers.LocalPlayer:kick("Contect Admin")
+                game.PLayers.LocalPlayer:kick("Contect Admin: ", CurrectHwid)
                 return
             end
         end
