@@ -1,7 +1,7 @@
 repeat wait(3) until game:IsLoaded()
 -- ซ้ายคือ Key ขวาคือ Hwid
 local hwid = {
-    ["BB4ABF2DEDD1BA793F65_DoreamonHub"] = "",
+    	[""] = "",
 	[""] = "",
 	[""] = "",
 	[""] = "",
