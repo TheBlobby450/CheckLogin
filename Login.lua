@@ -1,4 +1,3 @@
-_G.MyKey = _G.GG
 local CurrectHwid = gethwid()
 --รับHWID ปัจจุบัน
 local keys = {
