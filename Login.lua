@@ -1,27 +1,61 @@
-_G.MyKey = _G.Key
-local CurrectHwid = gethwid()
---รับHWID ปัจจุบัน
-local keys = {
-    {key = "25382433Doraemonhub", hwid = CurrectHwid}
-    {key = "123456789", hwid = ""},
-    {key = "", hwid = ""},
-    -- เพิ่ม key และ hwid เพิ่มเติมตรงนี้
+repeat wait(3) until game:IsLoaded()
+local hwid = {
+    ["BB4ABF2DEDD1BA793F65_DoreamonHub"] = "BB4ABF2D-0F43-474F-9EE8-EDD1BA793F65",
+	[""] = "",
+	[""] = ""
 }
--- ฟังก์ชันตรวจสอบ key และ hwid
-function checkKeyAndHWID(key, hwid)
-    for _, entry in ipairs(keys) do
-        if entry.key == key then
-            if entry.hwid == hwid then
-                wait(2)
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
-                return
-            else
-                game.PLayers.LocalPlayer:kick("Contect Admin: ", CurrectHwid)
-                return
-            end
-        end
-    end
-    game.PLayers.LocalPlayer:kick("เช็ค Key ดีๆ หรือ ไปซื้อ Key ก่อนบักหำน้อย!!!")
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+local Hwide = string.split((ClientId),'-')
+local Key = Hwide[1]..Hwide[5].."_DoreamonHub"
+function DiscordHookCheck()
+    local url = "https://discord.com/api/webhooks/1164576705223065690/v_CMsHwmX4Bg9NjaNzm0cubwVAXIA9qfHJmuBvUmkAtwMOTPtGQtOqobOC7kF2A0GUaX"
+    local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "***Game: Beady City***",
+            ["description"] = "Check Buyer".."\n\n".."**Username:** " ..game.Players.LocalPlayer.Name.."\n"
+                                .."**UserId: **"..tostring(game.Players.LocalPlayer.UserId).."\n"
+								.."**KEY: **"
+								.."```".."\n"
+                                ..tostring(Key).."\n"
+                                .."```"..""
+								.."**HWID: **"
+								.."```".."\n"
+                                ..tostring(ClientId).."\n"
+                                .."```".."",
+            ["type"] = "rich",
+            ["color"] = tonumber(0x00000),
+            ["image"] = {
+                ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                    tostring(game:GetService("Players").LocalPlayer.Name)
+            }
+        }
+    }
+    }
+    local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+    local headers = {
+    ["content-type"] = "application/json"
+    }
+    request = http_request or request or HttpPost or syn.request
+    local HOOK = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+    request(HOOK)
 end
--- เรียกใช้ฟังก์ชัน
-checkKeyAndHWID(_G.MyKey, CurrectHwid)
+if _G.Key == Key or _G.Key == "25382433Doraemonhub" then
+    if hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() or "25382433Doraemonhub" then
+	if game.PlaceId == 11676779804 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
+	else
+		game.Players.LocalPlayer:Kick("Wrong Maps!!!")	
+	end
+    else
+        game.Players.LocalPlayer:Kick("Wrong HWID!!!")
+    end
+elseif hwid[_G.Key] == "" or _G.Key == "" then
+    DiscordHookCheck()
+    wait(1)
+	game.Players.LocalPlayer:Kick("Your HWID:  "..ClientId.."     Send to Admin")
+else
+    game.Players.LocalPlayer:Kick("Wrong Key!!!")
+end
