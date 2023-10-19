@@ -1,4 +1,4 @@
-task.wait(5)
+wait(5)
 -- ซ้ายคือ Key ขวาคือ Hwid
 local hwid = {
     	[""] = "",
