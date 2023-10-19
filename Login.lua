@@ -2,7 +2,23 @@ repeat wait(3) until game:IsLoaded()
 local hwid = {
     ["BB4ABF2DEDD1BA793F65_DoreamonHub"] = "BB4ABF2D-0F43-474F-9EE8-EDD1BA793F65",
 	[""] = "",
-	[""] = ""
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
+	[""] = "",
 }
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwide = string.split((ClientId),'-')
