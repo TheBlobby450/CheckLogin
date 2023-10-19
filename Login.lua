@@ -1,24 +1,27 @@
 _G.MyKey = _G.GG
+local CurrectHwid = gethwid()
+--รับHWID ปัจจุบัน
 local keys = {
-    {key = "GGkey", hwid = "123456789"},
-    {key = "GG", hwid = ""},
+    {key = "Doreamon", hwid = CurrectHwid}
+    {key = "", hwid = ""},
+    {key = "", hwid = ""},
     -- เพิ่ม key และ hwid เพิ่มเติมตรงนี้
 }
-local CurrectHwid = gethwid()
 -- ฟังก์ชันตรวจสอบ key และ hwid
 function checkKeyAndHWID(key, hwid)
     for _, entry in ipairs(keys) do
         if entry.key == key then
             if entry.hwid == hwid then
-                print("valid")
+                wait(2)
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/test/main/Nahee.lua"))()
                 return
             else
-                print("invalid")
+                game.PLayers.LocalPlayer:kick("Contect Admin")
                 return
             end
         end
     end
-    print("invalid")
+    game.PLayers.LocalPlayer:kick("เช็ค Key ดีๆ หรือ ไปซื้อ Key ก่อนบักหำน้อย!!!")
 end
 -- เรียกใช้ฟังก์ชัน
 checkKeyAndHWID(_G.MyKey, CurrectHwid)
