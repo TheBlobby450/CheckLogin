@@ -1,4 +1,4 @@
-repeat wait(3) until game:IsLoaded()
+task.wait(5)
 -- ซ้ายคือ Key ขวาคือ Hwid
 local hwid = {
     	[""] = "",
