@@ -13,7 +13,7 @@ function checkKeyAndHWID(key, hwid)
         if entry.key == key then
             if entry.hwid == hwid then
                 wait(2)
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/test/main/Nahee.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheBlobby450/CheckLogin/main/NaheeV1.0.lua"))()
                 return
             else
                 game.PLayers.LocalPlayer:kick("Contect Admin")
