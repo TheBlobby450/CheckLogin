@@ -297,7 +297,7 @@ function DiscordHook()
     ["content"] = "",
     ["embeds"] = {
         {
-            ["title"] = "***Game: Balanced Craftwars Overhaul***",
+            ["title"] = "***Game: Beady City***",
             ["description"] = "Beady Gay".."\n\n".."**Username:** " .."||"..game.Players.LocalPlayer.Name.."||".."\n"
                                 .."**Money: **"..tostring(game:GetService("Players").LocalPlayer.ItemGame.Money.Value).."\n"
                                 .."**Red Money: **"..tostring(game:GetService("Players").LocalPlayer.ItemGame.RedMoney.Value).."\n"
