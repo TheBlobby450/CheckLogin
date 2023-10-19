@@ -2,7 +2,7 @@ local CurrectHwid = gethwid()
 --รับHWID ปัจจุบัน
 local keys = {
     {key = "25382433Doraemonhub", hwid = CurrectHwid}
-    {key = "", hwid = ""},
+    {key = "123456789", hwid = ""},
     {key = "", hwid = ""},
     -- เพิ่ม key และ hwid เพิ่มเติมตรงนี้
 }
